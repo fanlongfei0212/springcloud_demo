@@ -62,8 +62,8 @@ public class EurekaServerApplication {
 * 高可用Eureka服务注册发现中心
 
     1. 配置多个Eureka服务的配置文件作为多个服务发现节点的配置，如：
-        **application-peer1.properties
-        application-peer1.properties**
+        **application-peer1.properties**
+        **application-peer2.properties**
     
     2. 不同实例的Eureka的配置需要注意，端口号不能相同，同时需要开启
     eureka.client.register-with-eureka=true、eureka.client.fetch-registry=true配置，
