@@ -117,3 +117,42 @@ public class EurekaServerApplication {
         * 在**Instances currently registered with Eureka**中发现两个已经注册的Eureka实例
         
         * 在**在General Info**中的registered-replicas和available-replicas中出现了其他Eureka的地址
+        
+## Config配置中心
+
+* 添加依赖：Eureka依赖
+    
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-config-server</artifactId>
+</dependency>
+```
+
+* 使用【@SpringBootApplication】注解在入口类中开启SpringCloud Config的配置中心服务端功能
+
+```java
+@EnableConfigServer
+@SpringBootApplication
+public class ConfigServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ConfigServerApplication.class, args);
+	}
+
+}
+```
+
+* 配置Git的相关信息，在application.properties中
+
+    1. spring.cloud.config.server.git.uri：配置Git仓库的地址
+    2. spring.cloud.config.server.git.search-paths：配置项目中的相对文件地址
+    3. spring.cloud.config.server.git.username：Git用户名
+    4. spring.cloud.config.server.git.password：Git密码
+
+```properties
+spring.cloud.config.server.git.uri=https://github.com/fanlongfei0212/springcloud_demo_config.git
+spring.cloud.config.server.git.search-paths=zuul
+spring.cloud.config.server.git.username=fanlongfei0212
+spring.cloud.config.server.git.password=githubPassword0212
+```
