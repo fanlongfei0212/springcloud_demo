@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @Modified:
  */
 @Component
-public class HelloFallback implements HelloServer{
+public class HelloServerFallback implements HelloServer{
 
 
     @Override
