@@ -178,8 +178,8 @@ public class ConfigServerApplication {
 ```properties
 spring.cloud.config.server.git.uri=https://github.com/fanlongfei0212/springcloud_demo_config.git
 spring.cloud.config.server.git.search-paths=zuul
-spring.cloud.config.server.git.username=fanlongfei0212
-spring.cloud.config.server.git.password=githubPassword0212
+spring.cloud.config.server.git.username=*****
+spring.cloud.config.server.git.password=*****
 ```
 
 * 动态刷新
