@@ -282,7 +282,7 @@ public interface HelloServer {
 
 ## 使用Zuul进行网关动态路由配置
 
-* 在配置中心创建zuul网关的配置信息文件
+* 在配置中心对应的Git仓库中创建zuul网关的配置信息文件
 
 **gateway.properties、
   gateway-dev.properties、
