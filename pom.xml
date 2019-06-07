@@ -6,7 +6,17 @@
 
     <groupId>com.learn.fly</groupId>
     <artifactId>springcloud_demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>common-base</module>
+        <module>config-server</module>
+        <module>eureka-server</module>
+        <module>gateway-server</module>
+        <module>hello-server</module>
+        <module>consumer-server</module>
+    </modules>
 
 
 </project>

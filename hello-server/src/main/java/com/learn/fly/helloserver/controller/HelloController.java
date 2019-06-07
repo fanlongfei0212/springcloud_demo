@@ -1,10 +1,9 @@
 package com.learn.fly.helloserver.controller;
 
+import com.learn.fly.helloserver.model.Hello;
 import com.learn.fly.helloserver.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author:Fly
@@ -27,5 +26,17 @@ public class HelloController {
     public String hello(){
 
         return helloService.hello();
+    }
+
+    /**
+     *@Author:Fly Created in 2019/6/7 下午10:47
+     *@Description: 添加
+     */
+    @PostMapping(value = "/add")
+    public String add(@RequestBody Hello hello){
+
+        helloService.add(hello);
+
+        return "ok";
     }
 }
